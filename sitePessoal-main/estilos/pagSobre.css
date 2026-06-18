@@ -1,0 +1,74 @@
+nav{
+    width: 200px;
+    background-color: #333;
+}
+
+nav ul{
+    list-style: none;
+}
+
+nav li{
+    position: relative;
+}
+
+nav li a{
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+}
+aside nav li a{
+    background-color: #272727;
+
+}
+
+nav li a:hover{
+    background-color: red;
+}
+
+.dropdown-menu{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: white;
+    min-width: 150px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+
+.dropdown-menu a{
+    color: black;
+}
+
+.dropdown-menu a:hover{
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-menu{
+    display: block;
+}
+.favoritos figure img{
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 0%;
+}
+.galeria{
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+}
+@media (max-width: 767px){
+
+    main{
+        flex-direction: column;
+    }
+
+    nav{
+        width: 100%;
+    }
+
+    .dropdown-menu{
+        position: static;
+    }
+}

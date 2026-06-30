@@ -26,7 +26,7 @@ function mostrarDadosForm(event){
         "Data de nascimento: " + data;
 
     document.getElementById("pTelefone").innerHTML =
-        "Telefone" + tel;
+        "Telefone: " + tel;
 
     document.getElementById("pMensagem").innerHTML =
         "Mensagem: " + mensagem;

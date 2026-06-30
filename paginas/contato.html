@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isabelly</title>
+
+    <link rel="shortcut icon" href="../imagens/favicon/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../estilos/layout.css">
+    <link rel="stylesheet" type="text/css" href="../estilos/pagSobre.css">    
+    <link rel="stylesheet" type="text/css" href="../estilos/formulario.css">
+</head>
+
+<body>
+
+    <header>
+        <figure>
+            <img class="logo" src="../imagens/imagens/isa.jpeg" alt="Logo">
+        </figure>
+        <h1>Isabelly Rodrigues</h1>
+    </header>
+
+    <main>
+
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+
+                <li><a href="../paginas/sobre.html">Sobre</a></li>
+
+                <li class="dropdown">
+                    <a href="#">Serviços</a>
+
+                    <ul class="dropdown-menu">
+                        <li><a href="../paginas/galeria.html">Galeria</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="../paginas/contato.html">Contato</a></li>
+            </ul>
+        </nav>
+
+        <section>
+
+            <form id="formulario" action="respFormulario.html" method="post">
+
+                <fieldset>
+
+                    <legend>Contato</legend>
+
+                    <label for="ipNome">Nome:</label>
+                    <input id="ipNome" name="Nome" type="text" required>
+
+                    <label for="ipEmail">Email:</label>
+                    <input id="ipEmail" name="iEmail" type="email" required>
+
+                    <label for="ipDtNascimento">Data de Nascimento:</label>
+                    <input id="ipDtNascimento" name="DtNascimento" type="date" required>
+
+                    <label for="ipTelefone">Telefone</label>
+                    <input id="ipTelefone" name="Telefone" type="tel" maxlength="15" required>                  
+
+                    <label for="taMensagem">Mensagem:</label>
+                    <textarea id="taMensagem" name="taMensagem" rows="5"></textarea>
+
+                    <label for="slMotivo">Motivo do Contato:</label>
+                    <select id="slMotivo" name="slMotivo">
+                        <option value="indicação">Indicação</option>
+                        <option value="estagio">Oferecer um estágio</option>
+                        <option value="criticar">Criticar</option>
+                        <option value="feedback">Feedback</option>
+                        <option value="outros">Outros</option>
+                    </select>
+
+                    <button type="button" onclick="mostrarDadosForm(event)">
+                        Enviar
+                    </button>
+                    
+                    <button id="btConfirmar" type="button" onclick="confirmarDados()" style="display:none;"> 
+                        Confirmar
+                    </button>
+                </fieldset>
+
+            </form>
+            <h2 id="resposta"></h2>
+            <br>
+            <p id="pNome"></p>
+            <p id="pEmail"></p>
+            <p id="pDtNascimento"></p>
+            <p id="pTelefone"></p>
+            <p id="pEndereco"></p>
+            <p id="pMensagem"></p>
+            <p id="pMotivo"></p>
+
+        </section>
+        <aside>
+            <figure>
+                <img src="../imagens/imagens/isabellyFoto.jpg" title="Isabelly Rodrigues">
+            </figure>
+                <nav>
+                    <ul>
+                        <li> <a href="https://www.linkedin.com/in/isabelly-rodrigues-458283356/?skipRedirect=true" target="_blank"> Meu LinkedIn </a></li>  
+                    </ul> 
+                </nav>
+        </aside>
+    </main>
+
+    <footer>
+        <p>Desenvolvido por Isabelly Rodrigues &copy; 2026</p>
+    </footer>
+
+    <script src="../scripts/enviarDadosForm.js"></script>
+
+</body>
+</html>

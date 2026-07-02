@@ -13,8 +13,21 @@ function mostrarDadosForm(event){
     let mensagem = document.getElementById("taMensagem").value;
     let motivo = document.getElementById("slMotivo").value;
 
-    document.getElementById("resposta").innerHTML =
-        "Olá, " + nome + ", confira os dados informados:";
+    let opcao = document.querySelector('input[name="gostou"]:checked');
+    let gostou = opcao ? opcao.value : "Não respondeu";
+
+    if (gostou == "Sim") {
+        document.getElementById("resposta").innerHTML =
+            "Olá, " + nome + "! Fico feliz que tenha gostado do site! 😃";
+    }
+    else if (gostou == "Não") {
+        document.getElementById("resposta").innerHTML =
+            "Olá, " + nome + "! Obrigado pela sinceridade, sei que sou uma inútil. Vou melhorar o site! 😔";
+    }
+    else {
+        document.getElementById("resposta").innerHTML =
+            "Olá, " + nome + ", confira os dados informados:";
+    }
 
     document.getElementById("pNome").innerHTML =
         "Nome: " + nome;
@@ -34,12 +47,14 @@ function mostrarDadosForm(event){
     document.getElementById("pMotivo").innerHTML =
         "Motivo: " + motivo;
 
+    document.getElementById("pGostou").innerHTML =
+        "Gostou do site: " + gostou;
+
     document.getElementById("btConfirmar").style.display = "inline-block";
 }
 
 function confirmarDados(){
     alert("Dados confirmados com sucesso!");
 
-    // Envia o formulário
     document.getElementById("formulario").submit();
 }
